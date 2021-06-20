@@ -1,5 +1,9 @@
 package com.rhm.andestoi.infrastructure.controller
 
-class PositionRequest {
 
-}
+data class PositionRequest(
+    val userId: String,
+    val deviceId: String,
+    val latitude: Double,
+    val longitude: Double
+)
