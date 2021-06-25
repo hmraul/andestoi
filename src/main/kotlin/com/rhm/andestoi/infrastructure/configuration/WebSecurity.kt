@@ -16,6 +16,7 @@ class SpringSecurityApplication
 class WebSecurityConfiguration : WebSecurityConfigurerAdapter() {
     override fun configure(http: HttpSecurity?) {
         http {
+            csrf { disable() }
             authorizeRequests {
                 authorize("/**", permitAll)
             }
