@@ -31,7 +31,7 @@ class PositionManagerIntegrationTests {
     fun `return created position on save`() {
         val requestContent = "{\"userId\": \"my-user_id\",\"deviceId\": \"device-id\",\"latitude\": 0.001,\"longitude\": 0.002}"
         val expected = "{\"eventDate\": \"2021-06-20T11:00:000.00\",\"position\": {\"latitude\": 0.001,\"longitude\": 0.002}}"
-        mockMvc.post("/save") {
+        mockMvc.post("/positions") {
             contentType = MediaType.APPLICATION_JSON
             content = requestContent
             accept = MediaType.APPLICATION_JSON
