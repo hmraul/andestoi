@@ -3,8 +3,13 @@ package com.rhm.andestoi.infrastructure.repository
 import com.rhm.andestoi.domain.PositionRepository
 import com.rhm.andestoi.domain.UserPosition
 
-class InMemory: PositionRepository {
-    override fun save(position: UserPosition) {
-        TODO("Not yet implemented")
+class InMemory(private val dateProvider: DateProvider) : PositionRepository {
+
+    private val repo = mutableListOf<UserPosition>()
+
+    override fun save(position: UserPosition): UserPosition {
+        position.setDate(dateProvider.now())
+        repo.add(position)
+        return position
     }
 }

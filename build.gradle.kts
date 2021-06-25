@@ -34,6 +34,7 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	// runtimeOnly("io.micrometer:micrometer-registry-datadog")
 	runtimeOnly("org.postgresql:postgresql")
+	testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("de.flapdoodle.embed:de.flapdoodle.embed.mongo")
 	testImplementation("io.projectreactor:reactor-test")
@@ -43,6 +44,7 @@ dependencies {
 	testImplementation("org.testcontainers:kafka")
 	testImplementation("org.testcontainers:mongodb")
 	testImplementation("org.testcontainers:postgresql")
+
 }
 
 dependencyManagement {

@@ -15,10 +15,4 @@ class AndestoiApplicationTests {
 	@Test
 	fun contextLoads() {
 	}
-
-	@Test
-	fun `return OK on save`() {
-
-	}
-
 }
